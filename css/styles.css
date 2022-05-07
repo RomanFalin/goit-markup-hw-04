@@ -164,6 +164,7 @@ ul{
     background: var(--footer-color);
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: url(../images/hero_background.jpg);
 }
 
 .hero{
@@ -204,7 +205,7 @@ ul{
 
 .hero-button:hover,
 .hero-button:focus{
-    background-color: #3DA3F4;
+    background-color: #188CE8;
 }
 
 /*----------------------------------------FEATURES----------------------------------------*/
