@@ -316,8 +316,8 @@ ul{
 }
 
 .team-member > .item{
-    margin-top: var(--item-margin);
-    margin-bottom: var(--item-margin);    
+    padding-top: var(--item-margin);
+    padding-bottom: var(--item-margin);    
 }
 
 .team-name{
