@@ -24,7 +24,8 @@ h4,
 h5,
 h6,
 p,
-ul{
+ul,
+address{
     margin: 0;
     padding: 0;
 }
@@ -125,6 +126,7 @@ a{
 .contacts{
     display: flex;
     margin-left: auto;
+    align-items: center;
 }
 
 .contacts > .item:not(:first-child){
@@ -138,6 +140,28 @@ a{
     color: var(--sub-text-color);
     text-decoration: none;
     list-style-type: none;
+}
+
+.contacts  .item{
+    display: flex;
+}
+
+.contacts > .item::before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: var(--back-color);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+.contacts > .email::before{
+    background-image: url(../images/envelope_img.svg);
+}
+
+.contacts > .phone::before{
+    background-image: url(../images/smartphone_img.svg);
 }
 
 .contacts .contact:hover,
@@ -238,6 +262,32 @@ ul{
     width: 270px;
 }
 
+.adv-features > .item::before{
+    content: "";
+    display: block;
+    background-color: #F5F4FA;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 120px;
+    margin-bottom: 30px;
+}
+
+.adv-features > .attention::before{
+    background-image: url(../images/antenna_img.svg);
+}
+
+.adv-features > .punctuality::before{
+    background-image: url(../images/clock_img.svg);
+}
+
+.adv-features > .planning::before{
+    background-image: url(../images/diagram_img.svg);
+}
+
+.adv-features > .technologies::before{
+    background-image: url(../images/astronaut_img.svg);
+}
+
 .adv-features > .item:not(:last-child){
     margin-right: var(--item-margin);
 }
@@ -336,12 +386,25 @@ ul{
     color: var(--sub-text-color);
 }
 
+.social-media > .icon{
+    width: 20px;
+    height: 20px;
+}
+
 /*----------------------------------------FOOTER----------------------------------------*/
 
 .section-footer{
     background: var(--footer-color);
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.footer{
+    display: flex;
+}
+
+.address-footer{
+    margin-right: 70px;
 }
 
 .logo{
@@ -377,6 +440,18 @@ ul{
     line-height: 1.7;
     color: var(--sub-text-color);
     text-decoration: none;
+}
+
+.join {
+    margin-right: auto;
+}
+
+.title-join {
+    color: var(--back-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
 }
 
 /*----------------------------------------FILTERS----------------------------------------*/
