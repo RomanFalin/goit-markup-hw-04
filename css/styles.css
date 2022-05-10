@@ -367,7 +367,7 @@ ul{
 
 .team-member > .item{
     padding-top: var(--item-margin);
-    padding-bottom: var(--item-margin);    
+    margin-bottom: 16px;    
 }
 
 .team-name{
@@ -386,9 +386,47 @@ ul{
     color: var(--sub-text-color);
 }
 
-.social-media > .icon{
-    width: 20px;
-    height: 20px;
+.social-icons{
+    display: flex;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-bottom: 30px;
+}
+
+.social-icon{
+    width: 44px;
+    height: 44px;
+}
+
+.social-icon:not(:last-child){
+    margin-right: 10px;
+}
+
+.social-link:hover{
+    background-color: var(--brand-color);
+}
+
+.social-link{
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.icon-team{
+    margin: 12px;
+}
+
+/*----------------------------------------PARTNERS----------------------------------------*/
+
+.part-companies{
+    display: flex;
+    align-items: center;
+}
+
+.company-icon{
+    height: 50px;
+    width: 50px;
 }
 
 /*----------------------------------------FOOTER----------------------------------------*/
@@ -444,6 +482,7 @@ ul{
 
 .join {
     margin-right: auto;
+    margin-top: 12px;
 }
 
 .title-join {
@@ -452,6 +491,32 @@ ul{
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
+}
+
+.footer-icons{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.footer-icon:not(:last-child){
+    margin-right: 20px;
+}
+
+.footer-link{
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.icon{
+    margin: 12px;
+}
+
+.footer-link:hover{
+    background: var(--brand-color);
 }
 
 /*----------------------------------------FILTERS----------------------------------------*/
