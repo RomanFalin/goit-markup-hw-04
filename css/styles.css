@@ -13,6 +13,7 @@ body{
     --back-color: #FFFFFF;
     --footer-color: #2F303A;
     --team-color: #F5F4FA;
+    --icon-color: #afb1b8;
     --item-margin: 30px;
     --section-padding: 94px;
 }
@@ -142,38 +143,40 @@ a{
     list-style-type: none;
 }
 
-.contacts  .item{
+.contacts .item{
     display: flex;
 }
 
-.contacts > .item::before{
-    content: "";
-    width: 16px;
-    height: 16px;
-    background-color: var(--back-color);
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-right: 10px;
-}
-
-.contacts > .email::before{
-    background-image: url(../images/envelope_img.svg);
-}
-
-.contacts > .phone::before{
-    background-image: url(../images/smartphone_img.svg);
+.contacts .contact{
+    display: flex;
 }
 
 .contacts .contact:hover,
+.contacts .contact:hover .contact-icon,
 .addresses .address:hover,
 .addresses .phy-address:hover{
     color: var(--brand-color);
+    fill: var(--brand-color);
 }
 
 .contacts .contact:focus,
+.contacts .contact:focus .contact-icon,
 .addresses .address:focus,
-.addresses .phy-address:focus {
+.addresses .phy-address:focus{
     color: var(--brand-color);
+    fill: var(--brand-color);
+}
+
+.contact-icons{
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.contact-icon{
+    width: 16px;
+    height: 16px;
+    fill: var(--sub-text-color);
 }
 
 ul{
@@ -262,32 +265,6 @@ ul{
     width: 270px;
 }
 
-.adv-features > .item::before{
-    content: "";
-    display: block;
-    background-color: #F5F4FA;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 120px;
-    margin-bottom: 30px;
-}
-
-.adv-features > .attention::before{
-    background-image: url(../images/antenna_img.svg);
-}
-
-.adv-features > .punctuality::before{
-    background-image: url(../images/clock_img.svg);
-}
-
-.adv-features > .planning::before{
-    background-image: url(../images/diagram_img.svg);
-}
-
-.adv-features > .technologies::before{
-    background-image: url(../images/astronaut_img.svg);
-}
-
 .adv-features > .item:not(:last-child){
     margin-right: var(--item-margin);
 }
@@ -304,6 +281,21 @@ ul{
 .features-explain{
     line-height: 1.7;
     color: var(--sub-text-color);
+}
+
+.feature{
+    width: 270px;
+    height: 120px;
+    background: var(--team-color);
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.feature-icon{
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 25px;
 }
 
 /*----------------------------------------ACTIVITIES----------------------------------------*/
@@ -406,6 +398,10 @@ ul{
     background-color: var(--brand-color);
 }
 
+.social-link:hover .icon-team{
+    fill: var(--back-color);
+}
+
 .social-link{
     display: inline-block;
     width: 44px;
@@ -415,18 +411,56 @@ ul{
 
 .icon-team{
     margin: 12px;
+    fill: var(--icon-color);
 }
 
 /*----------------------------------------PARTNERS----------------------------------------*/
 
-.part-companies{
-    display: flex;
-    align-items: center;
+.partners {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
 }
 
-.company-icon{
-    height: 50px;
-    width: 50px;
+.company-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #212121;
+    margin-bottom: 50px;
+}
+
+.list-companies {
+    display: flex;
+}
+
+.company {
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+
+.company:hover {
+    border-color: var(--brand-color);
+    cursor: pointer;
+}
+
+.company:hover .company-icon {
+    fill: var(--brand-color);
+}
+
+.company:not(:last-child) {
+    margin-right: 30px;
+}
+
+.company-icon {
+    margin: 16px 32px;
+    width: 106px;
+    height: 60px;
+    fill: var(--icon-color);
 }
 
 /*----------------------------------------FOOTER----------------------------------------*/
@@ -581,11 +615,10 @@ ul{
     margin-bottom: var(--item-margin);
 }
 
-/*NOT SURE  WHY IT DOES NOT WORK*/
-
-/*.work-example:nth-child(3n) {
-    margin-right: 0px;
-}*/
+.work-example:hover{
+    border: 1px solid #EEEEEE;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 .work-title{
     font-weight: 700;
@@ -606,3 +639,4 @@ ul{
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
 }
+
