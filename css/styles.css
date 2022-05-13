@@ -199,7 +199,6 @@ ul{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-position: center;
     height: 600px;
     max-width: 1600px;
 }
@@ -289,13 +288,13 @@ ul{
     background: var(--team-color);
     border-radius: 4px;
     margin-bottom: 30px;
+    padding-left: 100px;
+    padding-top: 25px;
 }
 
 .feature-icon{
     width: 70px;
     height: 70px;
-    margin-left: 100px;
-    margin-top: 25px;
 }
 
 /*----------------------------------------ACTIVITIES----------------------------------------*/
@@ -359,7 +358,7 @@ ul{
 
 .team-member > .item{
     padding-top: var(--item-margin);
-    margin-bottom: 16px;    
+    padding-bottom: var(--item-margin);   
 }
 
 .team-name{
@@ -376,13 +375,14 @@ ul{
     line-height: 1.2;
     text-align: center;
     color: var(--sub-text-color);
+    margin-bottom: 16px;
 }
 
 .social-icons{
     display: flex;
     margin-left: 32px;
     margin-right: 32px;
-    margin-bottom: 30px;
+    justify-content: space-between;
 }
 
 .social-icon{
@@ -390,15 +390,13 @@ ul{
     height: 44px;
 }
 
-.social-icon:not(:last-child){
-    margin-right: 10px;
-}
-
-.social-link:hover{
+.social-link:hover,
+.social-link:focus{
     background-color: var(--brand-color);
 }
 
-.social-link:hover .icon-team{
+.social-link:hover .icon-team,
+.social-link:focus .icon-team{
     fill: var(--back-color);
 }
 
@@ -407,16 +405,16 @@ ul{
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    padding: 12px;
 }
 
 .icon-team{
-    margin: 12px;
     fill: var(--icon-color);
 }
 
 /*----------------------------------------PARTNERS----------------------------------------*/
 
-.partners {
+.section-partners {
     margin-left: auto;
     margin-right: auto;
     padding-top: var(--section-padding);
@@ -441,6 +439,7 @@ ul{
     height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+    padding: 16px 32px;
 }
 
 .company:hover {
@@ -457,7 +456,6 @@ ul{
 }
 
 .company-icon {
-    margin: 16px 32px;
     width: 106px;
     height: 60px;
     fill: var(--icon-color);
@@ -473,6 +471,7 @@ ul{
 
 .footer{
     display: flex;
+    align-items: baseline;
 }
 
 .address-footer{
@@ -516,7 +515,6 @@ ul{
 
 .join {
     margin-right: auto;
-    margin-top: 12px;
 }
 
 .title-join {
@@ -534,7 +532,7 @@ ul{
 }
 
 .footer-icon:not(:last-child){
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .footer-link{
@@ -609,14 +607,13 @@ ul{
 
 .work-example{
     background: var(--back-color);
-    box-sizing: border-box;
     flex-basis: calc(100% / 3 - var(--item-margin));
     margin-right: var(--item-margin);
     margin-bottom: var(--item-margin);
 }
 
-.work-example:hover{
-    border: 1px solid #EEEEEE;
+.work-example:hover,
+.work-example:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
