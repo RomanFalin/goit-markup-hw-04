@@ -625,6 +625,10 @@ ul{
     color: var(--sub-text-color);
 }
 
+.work-img{
+    display: block;
+}
+
 .work-img > .text{
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
